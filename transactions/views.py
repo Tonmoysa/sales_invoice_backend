@@ -1,3 +1,24 @@
-from django.shortcuts import render
+from rest_framework import viewsets, permissions
+from django.contrib.auth.models import User
+from .models import Transaction
+from .serializers import TransactionSerializer
 
-# Create your views here.
+
+class TransactionViewSet(viewsets.ReadOnlyModelViewSet):
+    """ViewSet for viewing transactions (read-only)"""
+    queryset = Transaction.objects.all()
+    serializer_class = TransactionSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def get_queryset(self):
+        """Filter transactions based on user permissions"""
+        user = self.request.user
+        
+        # Admin can see all transactions
+        if user.is_staff:
+            return Transaction.objects.all()
+        
+        # Regular users can only see transactions for their own invoices
+        return Transaction.objects.filter(invoice__created_by=user)
+
+
