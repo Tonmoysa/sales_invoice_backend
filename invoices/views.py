@@ -12,9 +12,19 @@ class InvoiceViewSet(viewsets.ModelViewSet):
     queryset = Invoice.objects.all()
     serializer_class = InvoiceReadSerializer
     
+    permission_classes = [permissions.IsAuthenticated]
+    
     def get_queryset(self):
         """Filter invoices based on user permissions"""
         user = self.request.user
+        
+        # Swagger schema generation time error
+        if getattr(self, 'swagger_fake_view', False):
+            return Invoice.objects.none()
+
+        # AnonymousUser empty queryset
+        if user.is_anonymous:
+            return Invoice.objects.none()
         
         # Admin can see all invoices
         if user.is_staff:

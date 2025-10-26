@@ -14,6 +14,14 @@ class TransactionViewSet(viewsets.ReadOnlyModelViewSet):
         """Filter transactions based on user permissions"""
         user = self.request.user
         
+         # Swagger schema generation  error 
+        if getattr(self, 'swagger_fake_view', False):
+            return Transaction.objects.none()
+
+        # AnonymousUser 
+        if user.is_anonymous:
+            return Transaction.objects.none()
+        
         # Admin can see all transactions
         if user.is_staff:
             return Transaction.objects.all()
