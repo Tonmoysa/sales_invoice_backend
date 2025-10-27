@@ -2,6 +2,46 @@
 
 A comprehensive Django REST Framework backend system for managing sales invoices and recording related transactions. This system provides secure user authentication, complete invoice lifecycle management, automatic transaction tracking, and detailed API documentation.
 
+---
+
+## 🚀 Live Demo
+
+### 🌐 Frontend (Deployed on Netlify)
+🔗 **URL:** [https://taupe-sunburst-23c239.netlify.app/](https://taupe-sunburst-23c239.netlify.app/)  
+👤 **Username:** `Tonmoy`  
+🔑 **Password:** `tonmoy123`
+
+---
+
+## ⚙️ Backend (Django REST Framework)
+
+### 🛠️ Admin Panel  
+🔗 **URL:** [https://sales-invoice-backend.onrender.com/admin/](https://sales-invoice-backend.onrender.com/admin/)  
+👤 **Username:** `admin`  
+🔑 **Password:** `admin123`
+
+### 📘 API Documentation (Swagger)  
+🔗 **URL:** [https://sales-invoice-backend.onrender.com/swagger/](https://sales-invoice-backend.onrender.com/swagger/)  
+👤 **Username:** `Tonmoy`  
+🔑 **Password:** `tonmoy123`
+
+### 📗 Alternative Docs (ReDoc)  
+🔗 **URL:** [https://sales-invoice-backend.onrender.com/redoc/](https://sales-invoice-backend.onrender.com/redoc/)
+
+---
+
+## 🧑‍💻 Source Code
+
+- **Backend Repository:** [https://github.com/Tonmoysa/sales_invoice_backend.git](https://github.com/Tonmoysa/sales_invoice_backend.git)
+
+---
+
+## 📄 Project Video
+
+- **Google Drive Link:** [Project Video](https://drive.google.com/file/d/1rvVWAFRujlpWwtHtANesksykbojhcR5s/view?usp=sharing)
+
+---
+
 ## 🎯 Project Overview
 
 This backend system fulfills all the specified requirements for a sales invoice management system:
