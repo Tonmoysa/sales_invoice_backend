@@ -392,9 +392,7 @@ DATABASE_URL=postgresql://user:password@localhost/dbname
 - Update documentation for API changes
 - Ensure all tests pass before submitting PR
 
-## 📝 License
 
-This project is licensed under the BSD License - see the LICENSE file for details.
 
 ## 🆘 Support & Troubleshooting
 
