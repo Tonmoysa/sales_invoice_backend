@@ -370,24 +370,5 @@ Import `Sales_Invoice_API.postman_collection.json` into Postman for:
 - Create an issue in the repository
 - Check Django logs for detailed error messages
 
-## 🔄 Version History
-
-- **v1.0.0** - Initial release
-  - Complete invoice management system
-  - JWT authentication
-  - Transaction tracking
-  - API documentation
-  - Comprehensive test suite
-
-## 🎯 Future Enhancements
-
-- [ ] Email notifications for invoice status changes
-- [ ] PDF invoice generation
-- [ ] Advanced reporting and analytics
-- [ ] Multi-currency support
-- [ ] Invoice templates
-- [ ] Customer management system
-- [ ] Payment gateway integration
-
 ---
 
