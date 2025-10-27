@@ -356,44 +356,6 @@ Import `Sales_Invoice_API.postman_collection.json` into Postman for:
 - Automated token management
 - Complete API testing workflow
 
-## 🚀 Deployment
-
-### Production Checklist
-1. Set `DEBUG = False` in settings
-2. Configure `ALLOWED_HOSTS` for your domain
-3. Set up PostgreSQL database
-4. Configure environment variables
-5. Set up static file serving
-6. Run database migrations
-7. Collect static files
-8. Set up SSL/HTTPS
-9. Configure proper CORS settings
-
-### Environment Variables
-Create a `.env` file for production:
-```env
-SECRET_KEY=your-production-secret-key
-DEBUG=False
-ALLOWED_HOSTS=yourdomain.com,www.yourdomain.com
-DATABASE_URL=postgresql://user:password@localhost/dbname
-```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Development Guidelines
-- Follow PEP 8 Python style guidelines
-- Add tests for new functionality
-- Update documentation for API changes
-- Ensure all tests pass before submitting PR
-
-
-
 ## 🆘 Support & Troubleshooting
 
 ### Common Issues
