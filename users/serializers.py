@@ -30,8 +30,35 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
 
 class UserRegistrationSerializer(serializers.ModelSerializer):
     """Serializer for user registration"""
-    password = serializers.CharField(write_only=True, required=True, min_length=8)
-    password_confirm = serializers.CharField(write_only=True, required=True)
+    password = serializers.CharField(
+        write_only=True, 
+        required=True, 
+        min_length=8,
+        help_text="Password must be at least 8 characters long"
+    )
+    password_confirm = serializers.CharField(
+        write_only=True, 
+        required=True,
+        help_text="Confirm your password"
+    )
+    username = serializers.CharField(
+        required=True,
+        help_text="Unique username for the account"
+    )
+    email = serializers.EmailField(
+        required=True,
+        help_text="Valid email address"
+    )
+    first_name = serializers.CharField(
+        required=False,
+        allow_blank=True,
+        help_text="User's first name"
+    )
+    last_name = serializers.CharField(
+        required=False,
+        allow_blank=True,
+        help_text="User's last name"
+    )
     
     class Meta:
         model = User
